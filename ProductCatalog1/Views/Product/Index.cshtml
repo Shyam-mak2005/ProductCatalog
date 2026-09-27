@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ProductCatalog.Models.Product>
+
+@{
+    ViewBag.Title = "Product Catalog";
+}
+
+<h2>Product Catalog</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>₹@product.Price</td>
+                <td>@product.Category</td>
+            </tr>
+        }
+    </tbody>
+</table>
